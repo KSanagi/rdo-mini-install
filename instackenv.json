@@ -1,0 +1,46 @@
+{
+    "nodes": [
+        {
+            "pm_type":"ipmi",
+            "mac":[
+                "52:54:00:00:23:11"
+            ],
+            "name":"rdo-node1",
+            "cpu":"2",
+            "memory":"8192",
+            "disk":"50",
+            "arch":"x86_64",
+            "pm_user":"admin",
+            "pm_password":"admin",
+            "pm_addr":"192.168.23.111"
+        },
+        {
+            "pm_type":"ipmi",
+            "mac":[
+                "52:54:00:00:23:12"
+            ],
+            "name":"rdo-node2",
+            "cpu":"2",
+            "memory":"8192",
+            "disk":"50",
+            "arch":"x86_64",
+            "pm_user":"admin",
+            "pm_password":"admin",
+            "pm_addr":"192.168.23.112"
+        },
+        {
+            "pm_type":"ipmi",
+            "mac":[
+                "52:54:00:00:23:13"
+            ],
+            "name":"rdo-node3",
+            "cpu":"2",
+            "memory":"8192",
+            "disk":"50",
+            "arch":"x86_64",
+            "pm_user":"admin",
+            "pm_password":"admin",
+            "pm_addr":"192.168.23.113"
+        }
+    ]
+}
