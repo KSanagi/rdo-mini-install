@@ -8,8 +8,12 @@ yum -y install centos-release-openstack-train
 yum -y install ipmitool
 yum -y install python2-virtualbmc
 
-./clean-nodes.sh
-./create-nodes.sh
+./clean.sh
+./create-net.sh
+
+./create-node.sh ${NODE1}.$NET "${NODE1_MAC}" "${NODE1_MAC2}" 192.168.23.111  8192
+./create-node.sh ${NODE2}.$NET "${NODE2_MAC}" "${NODE2_MAC2}" 192.168.23.112  8192
+./create-node.sh ${NODE3}.$NET "${NODE3_MAC}" "${NODE3_MAC2}" 192.168.23.113  8192
 
 ./create-vm.sh ${UNDR1}.$NET "${UNDR1_MAC}" "${UNDR1_MAC2}" 8192
 
@@ -33,9 +37,6 @@ done
 
 scp $SSHOPT config stack@$UNDR1_IP:~
 ssh $SSHOPT stack@$UNDR1_IP 'openstack undercloud install 2>&1 | tee log-undercloud-install.txt'
-
-#scp $SSHOPT vlan-up.sh root@$UNDR1_IP:~
-#ssh $SSHOPT root@$UNDR1_IP '/root/vlan-up.sh'
 
 scp $SSHOPT deploy-overcloud.sh instackenv.json stack@$UNDR1_IP:~
 ssh $SSHOPT stack@$UNDR1_IP './deploy-overcloud.sh'
