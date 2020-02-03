@@ -2,8 +2,8 @@
 
 VERSION="queens"
 # you should check the ntp server work or not
-NTP=""
-DNS=""
+NTP="ntp.nict.jp"
+DNS="8.8.8.8"
 
 NUM="23" #10-99
 NET="net$NUM"

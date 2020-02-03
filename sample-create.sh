@@ -60,6 +60,5 @@ function create_cent_vm {
   return 1
 }
 
-create_cent_vm mstr1 ${IP_PREFIX}.150
-create_cent_vm node1 ${IP_PREFIX}.151
-#create_cent_vm node2 ${IP_PREFIX}.152
+create_cent_vm vm1 ${IP_PREFIX}.161
+create_cent_vm vm2 ${IP_PREFIX}.162

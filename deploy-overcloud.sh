@@ -32,5 +32,6 @@ parameter_defaults:
   SwiftRingBuild: false
   RingBuild: false
 EOS
-openstack overcloud deploy --templates -e deploy-parameters.yaml --compute-scale 2 --ntp-server $NTP 2>&1 | tee log-overcloud-deploy.txt
+#openstack overcloud deploy --templates -e deploy-parameters.yaml --compute-scale 2 --ntp-server $NTP 2>&1 | tee log-overcloud-deploy.txt
+openstack overcloud deploy --templates --compute-scale 2 --ntp-server $NTP 2>&1 | tee log-overcloud-deploy.txt
 echo "openstack overcloud deploy          result=${PIPESTATUS[0]}" >> result.txt

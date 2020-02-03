@@ -8,7 +8,7 @@ MAC2=$3
 CPU="4"
 MEM=$4
 PUBKEYS=`cat /root/.ssh/id_rsa.pub`
-ISO="/var/www/html/iso/cent75.iso"
+ISO="/var/www/html/iso/CentOS-7-x86_64-DVD-1908.iso"
 
 cat << __EOS__ > /tmp/$VM-ks.cfg
 auth --enableshadow --passalgo=sha512
