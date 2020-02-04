@@ -20,4 +20,4 @@ openstack overcloud node import instackenv.json	2>&1 | tee log-overcloud-node-im
 openstack overcloud node introspect --all-manageable 2>&1 | tee log-overcloud-node-instrospect.txt
 openstack overcloud node provide --all-manageable 2>&1 | tee log-overcloud-node-provide.txt
 
-openstack overcloud deploy --templates --compute-scale 2 --ntp-server $NTP 2>&1 | tee log-overcloud-deploy.txt
+openstack overcloud deploy --templates --compute-scale 3 --ntp-server $NTP 2>&1 | tee log-overcloud-deploy.txt

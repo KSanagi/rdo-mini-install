@@ -14,8 +14,9 @@ yum -y install python2-virtualbmc
 ./create-node.sh ${NODE1}.$NET "${NODE1_MAC}" "${NODE1_MAC2}" 192.168.23.111  8192
 ./create-node.sh ${NODE2}.$NET "${NODE2_MAC}" "${NODE2_MAC2}" 192.168.23.112  8192
 ./create-node.sh ${NODE3}.$NET "${NODE3_MAC}" "${NODE3_MAC2}" 192.168.23.113  8192
+./create-node.sh ${NODE4}.$NET "${NODE4_MAC}" "${NODE4_MAC2}" 192.168.23.114  8192
 
-./create-vm.sh ${UNDR1}.$NET "${UNDR1_MAC}" "${UNDR1_MAC2}" 8192
+./create-vm.sh   ${UNDR1}.$NET "${UNDR1_MAC}" "${UNDR1_MAC2}" 8192
 
 # checking if UNDR1 booted up and is ready to be sshed
 for i in `seq 30`; do

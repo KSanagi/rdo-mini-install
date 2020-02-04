@@ -62,3 +62,4 @@ function create_cent_vm {
 
 create_cent_vm vm1 ${IP_PREFIX}.161
 create_cent_vm vm2 ${IP_PREFIX}.162
+create_cent_vm vm3 ${IP_PREFIX}.163
