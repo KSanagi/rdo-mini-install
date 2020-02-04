@@ -20,13 +20,13 @@ yum -y install python2-virtualbmc
 # checking if UNDR1 booted up and is ready to be sshed
 for i in `seq 30`; do
   echo "$UNDR1_IP checking...count=$i"
-  ssh -q $UNDR1_IP "ls > /dev/null"
+  ssh $SSHOPT -q $UNDR1_IP "ls > /dev/null"
   if [[ $? -eq 0 ]]; then break ;fi
   sleep 10
 done
 
-scp $SSHOPT init.sh config $UNDR1_IP:/root
-ssh $SSHOPT $UNDR1_IP   "/root/init.sh | tee log-init.txt"
+scp $SSHOPT init-undercloud.sh config $UNDR1_IP:/root
+ssh $SSHOPT $UNDR1_IP "/root/init-undercloud.sh | tee log-init-undercloud.txt"
 
 for i in `seq 30`; do
   sleep 10
